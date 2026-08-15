@@ -1,45 +1,61 @@
 # TechTimeline Core Roadmap
 
-## Phase 1 — Engine foundation
-- [x] Private repository
-- [x] Product architecture
-- [x] Node/edge/claim/recipe model
-- [ ] Core graph engine
-- [ ] Deterministic prerequisite traversal
-- [ ] Alternative-path traversal
-- [ ] Graph validation tests
+## Phase 1 — Product contract
+- [x] Main product defined as the timeline
+- [x] Invention detail + "What was needed before?" flow defined
+- [x] Research/study audience defined
+- [x] Relation semantics defined
+- [x] Evidence/source requirements defined
+- [x] Commercial customer promise defined
 
-## Phase 2 — Research-grade evidence
+## Phase 2 — Timeline data foundation
+- [ ] Canonical node schema
+- [ ] Explicit date precision
+- [ ] Categories and node types normalized
+- [ ] Deduplicate inventions/entities
+- [ ] Import the curated historical dataset
 - [ ] Source registry
 - [ ] Claim-level citations
 - [ ] Relation-level evidence
 - [ ] Verification queue
-- [ ] Confidence scoring
-- [ ] Provenance/history of edits
 
-## Phase 3 — Product UI
-- [ ] Year-by-year timeline
-- [ ] Target search
-- [ ] Dependency map
+## Phase 3 — Core product UX
+- [ ] Full year-by-year timeline as the default screen
+- [ ] Search
+- [ ] Year navigation
+- [ ] Category filters
+- [ ] Invention detail panel/page
+- [ ] "What was needed before?" dependency view
+- [ ] Back navigation that preserves timeline position
+- [ ] Research view for source/evidence detail
+- [ ] Responsive navigation without excessive zooming
+
+## Phase 4 — Graph intelligence
+- [ ] Deterministic prerequisite traversal
+- [ ] Enabling/scientific/material/process/tool relation views
+- [ ] Alternative-path handling
 - [ ] Technical DNA
-- [ ] From-nature mode
+- [ ] From-Nature exploration
 - [ ] Compare mode
-- [ ] Recipe mode
+- [ ] Graph validation tests
 
-## Phase 4 — Scale
-- [ ] Import existing curated dataset
-- [ ] Deduplicate entities
-- [ ] Normalize dates and categories
-- [ ] Expand to 3,000+ nodes
-- [ ] Expand to 10,000+ nodes
-- [ ] Increase evidence-backed relation density
+## Phase 5 — Scale and quality
+- [ ] 3,000+ well-structured nodes
+- [ ] 10,000+ nodes after evidence workflow is stable
+- [ ] High relation coverage on important inventions
+- [ ] Node-by-node and relation-by-relation verification
+- [ ] Provenance/history of edits
+- [ ] Export and backup
 
-## Phase 5 — Commercial
-- [ ] Public read-only demo
-- [ ] Accounts
-- [ ] Free/pro access
+## Phase 6 — Commercial delivery
+- [ ] Public read-only product site
+- [ ] Customer-ready navigation and onboarding
+- [ ] Accounts/permissions if required
+- [ ] Free/pro access if required
 - [ ] Billing
 - [ ] Analytics
 - [ ] Terms/privacy
 - [ ] Customer support
-- [ ] Backups and export
+- [ ] Licensing/attribution review
+
+**Rule:** do not grow the dataset faster than the evidence workflow can support. The product should remain trustworthy as it scales.
