@@ -1,63 +1,76 @@
 # TechTimeline Core
 
-Privat huvudprojekt för TechTimeline.
+Huvudprojektet för TechTimeline.
 
-## Idé
-TechTimeline ska inte bara visa *när* något uppfanns. Kärnan ska svara på:
+## Produkt
 
-> **Vad behövde finnas först för att detta skulle bli möjligt?**
+**TechTimeline är en interaktiv tidslinje över uppfinningar och teknik.**
 
-En användare ska kunna välja en modern teknik, till exempel en smartphone, och arbeta bakåt genom:
+Tidslinjen är själva huvudprodukten. Användaren ska kunna se teknikens utveckling år för år och sedan öppna en uppfinning för att upptäcka:
 
-`produkt → delsystem → komponent → material → process → verktyg → kunskap → råmaterial`
+> **Vad behövde finnas innan detta kunde uppfinnas?**
 
-## Principer
+Användaren kan följa tidigare uppfinningar, vetenskaplig kunskap, material, processer, verktyg och möjliggörande teknik bakåt i tiden. Viktiga relationer ska kunna granskas mot källor.
 
-1. **Teknisk nödvändighet och historiskt inflytande hålls isär.**
-2. **Varje beroenderelation ska kunna motiveras.**
-3. **Källor hör till påståenden och relationer, inte bara till hela noder.**
-4. **Ungefärliga datum ska märkas som ungefärliga.**
-5. **Alternativa tekniska vägar ska kunna modelleras.**
-6. **Byggrecept ska vara separata från historisk kausalitet.**
-7. **Produkten ska fungera även när databasen växer kraftigt.**
+## Primär målgrupp
 
-## Huvudlägen
+- Studenter och lärare
+- Universitet och högre utbildning
+- Forskare och teknik-/vetenskapshistoriker
+- Läromedelsförlag
+- Museer och science centers
 
-- **Tidslinje** — vad fanns och när?
-- **Bygg** — vad krävs för att nå ett mål?
-- **Från naturen** — arbeta bakåt mot råmaterial och grundläggande processer.
-- **Teknologiskt DNA** — visa beroendena för en specifik nod.
-- **Jämför** — jämför teknikvägar, epoker eller alternativa lösningar.
-- **Källor** — se evidens per påstående och relation.
+## Produktens huvudlägen
 
-## Datamodell
+- **Tidslinje** — huvudvyn över uppfinningar år för år.
+- **Uppfinning** — detaljsida med år, beskrivning och bakgrund.
+- **Vad behövdes innan?** — visar tidigare uppfinningar och möjliggörande samband.
+- **Forskningsvy** — relationer, källor, evidensstatus och osäkerhet.
+- **Jämför** — jämför teknikvägar och gemensamma beroenden.
+- **Från naturen** — sekundär vy som fortsätter bakåt mot material, processer, energi och naturresurser när datan stödjer det.
 
-Noder och relationer ska lagras separat. En relation ska ha minst:
+## Relationstyper
 
-- `from_id`
-- `to_id`
-- `relation_type`
-- `dependency_strength`
-- `evidence_status`
+- `requires`
+- `enables`
+- `scientific_foundation`
+- `material_dependency`
+- `process_dependency`
+- `tool_dependency`
+- `influence`
+- `alternative_path`
+
+Teknisk nödvändighet och historiskt inflytande ska aldrig blandas ihop.
+
+## Källor och evidens
+
+Källor hör till specifika påståenden och relationer, inte bara till en hel nod. Ett årtal i en källa är inte automatiskt bevis för att en teknisk relation är nödvändig.
+
+Varje viktig relation ska därför kunna bära:
+
+- förklaring/rationale
 - `source_ids`
-- `rationale`
+- evidensstatus
+- confidence
+- granskningsdatum
 
-En nod ska kunna ha:
+## Datum
 
-- namn
-- år/intervall
-- datumtyp
-- kategori
-- beskrivning
-- material
-- verktyg
-- energi
-- process
-- kunskap
-- svårighetsgrad
-- evidensnivå
-- källor
+Tidslinjen ska kunna hantera exakta år, intervall och ungefärliga perioder. Osäkra datum ska inte visas som exakta.
+
+## Användarupplevelse
+
+Målet är **smidigt och enkelt för studier**, men tillräckligt detaljerat för forskning. Användaren ska kunna växla mellan översikt och djup utan att gå vilse i ett separat system.
+
+## Kommersiellt mål
+
+Kunden ska få en komplett, sammanhängande tidslinje som kan användas direkt — inte en samling isolerade dataposter. Värdet ligger i kombinationen av:
+
+1. kuraterad tidslinje
+2. strukturerade relationer
+3. källor och evidens
+4. enkel interaktiv navigering
 
 ## Status
 
-Detta repo är privat och är huvudbasen. Den publika `TechTimeline`-sidan är separat demo.
+Detta repository är huvudprojektet. `TechTimeline-Demo` används inte som separat produkt. Vidare utveckling ska ske här.
